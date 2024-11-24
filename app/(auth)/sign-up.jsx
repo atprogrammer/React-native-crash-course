@@ -7,6 +7,8 @@ import FormField from '../../components/FormField'
 import CustomButton from '../../components/CustomButton'
 import { Link } from 'expo-router';
 
+import { createUser } from '../../constants/lib/appwrite'
+
 export default function SignUp() {
 
   const [form, setForm] = useState({
@@ -19,7 +21,9 @@ export default function SignUp() {
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const submit = () => {
-    console.log('submit');
+    console.log('SignUp')
+    createUser();
+
   }
 
   return (
